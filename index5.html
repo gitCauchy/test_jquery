@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单选择器</title>
+</head>
+<script src="js/jquery-3.6.1.js"></script>
+<body>
+<table width="730" height="145" border="1">
+    <tr>
+        <td width="113" height="23">文本框</td>
+        <td width="209"><input type="text"></td>
+        <td width="93">密码框</td>
+        <td width="287"><input type="password"></td>
+    </tr>
+    <tr>
+        <td height="24">单选按钮</td>
+        <td><input type="radio" name="rabbit" value="Y">是<input type="radio" name="rabbit" value="N">否</td>
+        <td>复选框</td>
+        <td><input type="checkbox" name="hate" value="水果">水果<input type="checkbox" name="hate" value="蔬菜">蔬菜</td>
+    </tr>
+    <tr>
+        <td height="50">图像</td>
+        <td><input type="image" width="50" height="50"></td>
+        <td>文本域</td>
+        <td><input type="file"></td>
+    </tr>
+    <tr>
+        <td height="23">隐藏域</td>
+        <td><input type="hidden" name="hiddenarea"></td>
+        <td>下拉列表</td>
+        <td><select id="selectlist">
+            <option selected value="选项一">选项一</option>
+            <option value="选项二">选项二</option>
+            <option value="选项三">选项三</option>
+            <option value="选项四">选项四</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td height="25">提交按钮</td>
+        <td><input type="submit" onclick="submitBtn()"></td>
+        <td><input type="reset"></td>
+    </tr>
+    <tr>
+        <td valign="top">文本域</td>
+        <td colspan="3"><textarea cols="70" rows="3"></textarea></td>
+    </tr>
+</table>
+</body>
+<script>
+    $(function () {
+        $(":text").attr("value", "文本框");
+        $(":password").attr("value", "密码框");
+        $(":radio:eq(1)").attr("checked", true);
+        $(":checkbox:eq(1)").attr("checked", true);
+        $(":image").attr("src","image/test_jquery.png");
+        $(":file").css("width","200px");
+        $(":hidden").attr("value","隐藏的值");
+        $("#selectlist").css("background","#FCF");
+        $(":submit").attr("id","btn1");
+        $(":reset").attr("name","resetBtn");
+        $(":textarea").attr("text","文本内容");
+    })
+
+    function submitBtn(){
+        let checkbox = "";
+        $(":checkbox[name='hate'][checked]").each(function (){
+            checkbox += $(this).val() + "  ";
+        })
+        alert($(":text").val())
+    }
+</script>
+</html>

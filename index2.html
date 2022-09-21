@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层次选择器的使用</title>
+</head>
+<style>
+    body {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    div {
+        border: solid 1px black;
+        float: left;
+        margin: 10px;
+    }
+</style>
+<body>
+<div id="divOne" style="height: 200px; width: 200px">
+    父元素 One
+    <div style="height: 150px;width: 150px">
+        One 的子元素，也是后代元素
+        <div style="height: 50px;width: 50px">
+            One 的后代元素
+        </div>
+        <span style="height: 20px;width: 20px">111</span>
+    </div>
+</div>
+<div style="width: 200px;height: 200px">
+    <div style="height: 100px;width: 100px"></div>
+</div>
+<div style="width: 200px;height: 200px"></div>
+<button id="andeBtn">选择 One 所有后代 div 元素</button>
+<button id="pcBtn">选择 One 所有子 div 元素</button>
+<button id="nextBtn">选择 One 所有紧邻 div 元素</button>
+<button id="siblingsBtn">选择 One 所有兄弟 div 元素</button>
+</body>
+<script src="js/jquery-3.6.1.js"></script>
+<script>
+    $("#andeBtn").click(function () {
+        $("#divOne div").css("backgroundColor","red");
+    });
+
+    $("#pcBtn").click(function () {
+        $("#divOne>div").css("backgroundColor","red");
+    });
+
+    $("#nextBtn").click(function () {
+        $("#divOne+div").css("backgroundColor","red");
+    });
+
+    $("#siblingsBtn").click(function () {
+        $("#divOne~div").css("backgroundColor","red");
+    });
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本过滤器</title>
+</head>
+<script src="js/jquery-3.6.1.js"></script>
+<style>
+    li {
+        width: 50px;
+        height: 20px;
+        margin: 10px;
+    }
+</style>
+<body>
+<ul>
+    <li>第1项</li>
+    <li>第2项</li>
+    <li class="three">第3项</li>
+    <li>第4项</li>
+    <li>第5项</li>
+    <li>第6项</li>
+    <li>第7项</li>
+    <li>第8项</li>
+    <li>第9项</li>
+</ul>
+
+<button id="firstBtn">选择第一个</button>
+<button id="lastBtn">选择最后一个</button>
+<button id="notSelBtn">选择排除 class 为 three 的所有</button>
+<button id="evenBtn">选择偶数选项</button>
+<button id="oddBtn">选择基数</button>
+<button id="indexBtn">选择指定索引的选项</button>
+<button id="gtBtn">GT</button>
+<button id="hBtn">HEADER</button>
+</body>
+<script>
+    $("#firstBtn").click(function () {
+        $("li:first").css("backgroundColor","red");
+    })
+    $("#lastBtn").click(function () {
+        $("li:last").css("backgroundColor","red");
+    })
+    $("#notSelBtn").click(function () {
+        $("li:not(.three)").css("backgroundColor","red");
+    })
+    $("#evenBtn").click(function () {
+        $("li:even").css("backgroundColor","red");
+    })
+    $("#oddBtn").click(function () {
+        $("li:odd").css("backgroundColor","red");
+    })
+    $("#indexBtn").click(function () {
+        $("li:eq(1)").css("backgroundColor","red");
+    })
+    $("#gtBtn").click(function () {
+        $("li:gt(1)").css("backgroundColor","red");
+    })
+    $("#hBtn").click(function () {
+        $("h").css("backgroundColor","red");
+    })
+</script>
+</html>

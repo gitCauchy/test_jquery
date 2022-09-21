@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容过滤器</title>
+    <script src="js/jquery-3.6.1.js"></script>
+</head>
+<body>
+<div style="height: 100px;width: 100px">Hello World</div>
+<div style="height: 100px;width: 100px" class="mini"></div>
+<div style="height: 100px;width: 100px">
+    <div style="width: 70px;height: 70px" class="mini">class=mini</div>
+</div>
+<div style="height: 100px;width: 100px"></div>
+
+<button id="first">选择含有文本 World 的元素</button>
+<button id="second">选择不含有子元素的 div 元素</button>
+<button id="third">选取 class 为 mini 的 div 元素</button>
+<button id="fourth">选取含有子元素的 div 元素</button>
+</body>
+<style>
+    body {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    div {
+        border: solid 1px black;
+        float: left;
+        margin: 10px;
+    }
+</style>
+<script>
+    $("#first").click(function (){
+        $("div:contains(World)").css("backgroundColor","red");
+    })
+    $("#second").click(function (){
+        $("div:empty").css("backgroundColor","red");
+    })
+    $("#third").click(function (){
+        $("div:has(.mini)").css("backgroundColor","red");
+    })
+    $("#fourth").click(function (){
+        $("div:parent").css("backgroundColor","red");
+    })
+</script>
+</html>

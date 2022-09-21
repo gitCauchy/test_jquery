@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性过滤器</title>
+</head>
+<script src="js/jquery-3.6.1.js"></script>
+<style>
+    div {
+        border: solid 1px black;
+        float: left;
+        margin: 10px;
+    }
+
+    body {
+        font-size: 12px;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+<div class="one">
+    One
+    <div class="two" style="height: 70px;width: 70px">
+        Two
+    </div>
+    <div class="three" style="height: 70px;width: 70px">
+        Three
+    </div>
+</div>
+<div class="one">
+    One
+    <div class="two" style="height: 70px;width: 70px">
+        Two
+    </div>
+</div>
+<button id="first">选择所有 div 元素，且该元素为其父元素的第二个子元素</button>
+<button id="second">选择所有 div 元素，且该元素为其父元素的第一个子元素</button>
+<button id="third">选择所有class 属性不等于 one 的元素，且其为父元素下的最后一个子元素</button>
+<button id="fourth">选择 该元素为其父元素下的唯一子元素</button>
+
+</body>
+<script>
+    $("#first").click(function () {
+        $("div:nth-child(2)").css("backgroundColor","red");
+    })
+    $("#second").click(function () {
+        $("div:first-child").css("backgroundColor","red");
+    })
+    $("#third").click(function () {
+        $("div[class!='one']:last-child").css("backgroundColor","red");
+    })
+    $("#fourth").click(function () {
+        $("div:only-child").css("backgroundColor","red");
+    })
+</script>
+</html>
