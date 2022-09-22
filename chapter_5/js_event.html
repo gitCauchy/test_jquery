@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 实现事件监听</title>
+</head>
+<body>
+<button id="helloBtn">Hello</button>
+</body>
+<script>
+    window.onload=function (){
+        alert("Hello")
+    }
+    let btn = document.getElementById("helloBtn")
+    btn.onclick=function () {
+        alert("World!");
+    }
+</script>
+</html>

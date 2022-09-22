@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use On To Bind Muti</title>
+</head>
+<body>
+<div>移动鼠标试一下</div>
+</body>
+<script src="../js/jquery-3.6.1.js"></script>
+<script>
+    $("div").on("click", {hll: "hello world"}, function (event) {
+        console.log("event Object");
+        console.log(event);
+        alert("hello " + event.data.hll);
+    })
+</script>
+</html>
+<style>
+    div {
+        margin: auto;
+        height: 60px;
+        width: 60px;
+        background-color: green;
+    }
+</style>

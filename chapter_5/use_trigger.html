@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use Trigger</title>
+</head>
+<body>
+<button id="hello">Hello</button>
+<button id="trg">Tirgger</button>
+</body>
+<script src="../js/jquery-3.6.1.js"></script>
+<script>
+    $("#trg").click(function () {
+        $("#hello").trigger("click", ["Cauchy"]);
+    })
+    $("#hello").click(function (event, param) {
+        if (param) {
+            alert("Hello " + param);
+        } else {
+            alert("Hello World");
+        }
+    })
+</script>
+</html>

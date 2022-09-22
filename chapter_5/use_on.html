@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用 On 实现事件监听</title>
+</head>
+<body>
+<button id="helloBtn">Hello Button</button>
+</body>
+<script src="../js/jquery-3.6.1.js"></script>
+<script>
+    $("helloBtn").on("click",function () {
+        alert("Hello World!");
+    })
+</script>
+</html>
