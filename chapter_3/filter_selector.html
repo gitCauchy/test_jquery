@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>基本过滤器</title>
 </head>
-<script src="js/jquery-3.6.1.js"></script>
+<script src="../js/jquery-3.6.1.js"></script>
 <style>
     li {
         width: 50px;
@@ -25,14 +25,14 @@
     <li>第9项</li>
 </ul>
 
-<button id="firstBtn">选择第一个</button>
-<button id="lastBtn">选择最后一个</button>
-<button id="notSelBtn">选择排除 class 为 three 的所有</button>
-<button id="evenBtn">选择偶数选项</button>
-<button id="oddBtn">选择基数</button>
-<button id="indexBtn">选择指定索引的选项</button>
-<button id="gtBtn">GT</button>
-<button id="hBtn">HEADER</button>
+<button id="firstBtn">选择第一个</button> li:first
+<button id="lastBtn">选择最后一个</button> li:last
+<button id="notSelBtn">选择排除 class 为 three 的所有</button> li:not(.three)
+<button id="evenBtn">选择偶数选项</button> li:even
+<button id="oddBtn">选择奇数</button> li:odd
+<button id="indexBtn">选择指定索引的选项</button> li:eq(5)
+<button id="gtBtn">GT</button> li:ge(5)
+<button id="hBtn">HEADER</button> h
 </body>
 <script>
     $("#firstBtn").click(function () {

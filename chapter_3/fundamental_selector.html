@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<script src="js/jquery-3.6.1.js"></script>
+<script src="../js/jquery-3.6.1.js"></script>
 <head>
     <meta charset="utf-8">
     <title>基本选择器</title>
@@ -11,14 +11,11 @@
 <div></div>
 <button id="idBtn">修改 idOne 的元素背景为红色</button>
 <button id="eleBtn">改变所有 div 元素的背景为绿色</button>
-<button id="classBtn">改变 class 元素背景为红色</button>
-<button id="selBtn">改变所有 id class 属性元素北京为红色</button>
+<button id="classBtn">改变 class=classTwo 元素背景为红色</button>
+<button id="selBtn">改变所有 id class 属性元素 背景为红色</button>
 <button id="refresh">刷新页面</button>
 </body>
 <script>
-    $("#refresh").click(function () {
-        window.location.reload();
-    });
     $("#idBtn").click(function () {
         $("#idOne").css("backgroundColor", "red");
     });
@@ -29,7 +26,10 @@
         $(".classTwo").css("backgroundColor", "blue");
     });
     $("#selBtn").click(function () {
-        $("#idOne,.classTwo").css("backgroundColor", "yellow");
+        $("#idOne, .classTwo").css("backgroundColor", "yellow");
+    });
+    $("#refresh").click(function () {
+        window.location.reload();
     });
 </script>
 </html>

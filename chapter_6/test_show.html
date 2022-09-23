@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test show</title>
+</head>
+<body>
+<div id="panel">
+    <h5 id="head">One World</h5>
+    <div id="content" style="display: none">
+        　　As I look ahead to the 21st century—to your century—I see one world. But the one world I see is not a world
+        without differences between nations or peoples. Rather, it is one in which we all recognize that we have
+        profound differences and that we must learn to live with our differences rather than dying over them.
+    </div>
+</div>
+</body>
+</html>
+<script src="../js/jquery-3.6.1.js"></script>
+<script>
+    $("#head").click(function () {
+        $("#content").show(5000);
+    })
+    $("#head").on("dblclick", function () {
+        $("#content").hide();
+    })
+
+</script>
+<style>
+    #head {
+        width: 250px;
+        border: 1px solid black;
+        font-size: 20px;
+    }
+
+    #content {
+        width: 250px;
+        height: 300px;
+        border: 1px solid black;
+        font-size: 14px;
+    }
+</style>

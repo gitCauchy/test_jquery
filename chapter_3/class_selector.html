@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>属性过滤器</title>
 </head>
-<script src="js/jquery-3.6.1.js"></script>
+<script src="../js/jquery-3.6.1.js"></script>
 <style>
     div {
         border: solid 1px black;
@@ -23,13 +23,13 @@
 <div title="hello world" style="width: 120px;height: 150px">title=helloworld</div>
 <div title="test" id="tt" style="width: 120px;height: 150px">title=test,id=tt</div>
 <div style="width: 120px;height: 150px">没有 title 属性</div>
-<button id="first">选择所有带 title 属性的元素</button>
-<button id="second">选择 title 为 hello world 的元素</button>
-<button id="third">选择 title 不为 hello world 的元素</button>
-<button id="fourth">选择 title 以 h 开头的元素</button>
-<button id="five">选择title 以 t 为结束的元素</button>
+<button id="first">选择所有带 title 属性的元素</button> div[title]
+ <button id="second">选择 title 为 hello world 的元素</button> div[title=helloworld']
+<button id="third">选择 title 不为 hello world 的元素</button> div[title!=helloworld]
+<button id="fourth">选择 title 以 h 开头的元素</button> div[title^=w]]
+<button id="five">选择title 以 t 为结束的元素</button> div[title $=h]
 <button id="six">选择 title 含有 world 的元素</button>
-<button id="seven">选择含有 id 属性且含有 test title 的元素</button>
+<button id="seven">选择含有 id 属性且含有 test title 的元素</button>[id][title=]
 </body>
 <script>
     $("#first").click(function () {
