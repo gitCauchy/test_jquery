@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom</title>
+</head>
+<script src="../js/jquery-3.6.1.js"></script>
+<body>
+<ul>
+    <li title="grape">葡萄</li>
+    <li title="apple">苹果</li>
+    <li title="pear">梨</li>
+    <li title="banana">香蕉</li>
+</ul>
+<input type="button" id="btnClone" value="替换喜欢的水果">
+<div title="Durian">榴莲</div>
+</body>
+<script>
+    $("div").click(function () {
+        alert(this.innerHTML);
+    })
+    $("#btnClone").click(function () {
+        $("ul > li").replaceWith($("div"));
+    })
+</script>
+</html>

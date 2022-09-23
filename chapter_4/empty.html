@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom 操作</title>
+</head>
+<script src="js/jquery-3.6.1.js"></script>
+<body>
+<ul>
+    <li title="li1">1</li>
+    <li title="li2">2</li>
+    <li title="li3">3</li>
+    <li title="li4">4</li>
+    <li title="li5">5</li>
+</ul>
+<input type="button" value="emptyOne" id="emptyOne"/><br>
+<input type="button" value="emptyTwo" id="emptyTwo"/>
+</body>
+<script>
+    $("#emptyOne").click(function () {
+        $("ul").empty();
+    })
+    $("#emptyTwo").click(function () {
+        $("ul li:eq(3)").empty();
+    })
+</script>
+</html>

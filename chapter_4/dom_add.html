@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Handler</title>
+</head>
+<script src="../js/jquery-3.6.1.js"></script>
+<body>
+<ul>
+    <li title="grape"></li>
+    <li title="apple">苹果</li>
+    <li title="pear">梨</li>
+    <li title="banana">香蕉</li>
+</ul>
+<br>
+<button id="appendBtn">append</button> li:eq(0).append("葡萄")
+<br>
+<button id="appendToBtn">append</button> ul li:eq(0).appendTo(ul)
+<br>
+<button id="afterBtn">append</button>
+</body>
+<script>
+    $("#appendBtn").click(function () {
+        $("ul li:eq(0)").append("葡萄");
+    })
+
+    $("#appendToBtn").click(function () {
+        $("ul li:eq(0)").appendTo("ul");
+    })
+
+    $("#afterBtn").click(function () {
+        $("ul li:eq(0)").after("<li title='orange'>橘子</li>")
+    });
+</script>
+</html>
