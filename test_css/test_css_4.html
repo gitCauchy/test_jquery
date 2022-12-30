@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对齐方式</title>
+</head>
+<body>
+<div id="text">
+    <p>测试对齐方式，测试对齐方式，测试对齐方式，测试对齐方式，测试对齐方式，测试对齐方式。</p>
+</div>
+
+<div id="picture">
+    <img id="img" src="back.jpg" width="200px" height="100px">
+</div>
+
+<div id="abs">
+    <p>测试左右对齐-定位方式|测试左右对齐-定位方式|测试左右对齐-定位方式</p>
+</div>
+
+<div id="float">
+    <p>测试左右对齐-定位方式|测试左右对齐-定位方式|测试左右对齐-定位方式</p>
+</div>
+
+</body>
+
+<style>
+    #text {
+        text-align: center;
+        padding: 100px;
+        width: 50%;
+        margin: 0 auto;
+        border: 1px solid;
+    }
+
+    #img {
+        margin: 0 auto;
+        display: block;
+        /*padding: 300px;*/
+        line-height: 1.5;
+    }
+
+    #abs {
+        position: absolute;
+        left: 0;
+        width: 250px;
+    }
+
+    #float{
+        float:right;
+        width: 250px;
+    }
+
+</style>
+</html>
